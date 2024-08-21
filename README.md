@@ -1,1 +1,1 @@
-# Java Dla Testera - Rest API
+This is a small REST API tests project using Java created by following bonus section of https://java.akademiaqa.pl course.
