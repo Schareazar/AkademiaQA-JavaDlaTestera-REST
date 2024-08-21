@@ -4,7 +4,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import pl.akademiaqa.requests.booking.GetBookingIDsRequest;
+import pl.akademiaqa.requests.booking.requests.GetBookingIDsRequest;
 
 public class GetAllBookingIDsTest {
 

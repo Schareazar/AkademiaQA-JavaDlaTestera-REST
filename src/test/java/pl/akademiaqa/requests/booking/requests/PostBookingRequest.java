@@ -1,4 +1,4 @@
-package pl.akademiaqa.requests.booking;
+package pl.akademiaqa.requests.booking.requests;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
