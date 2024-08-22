@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 import static pl.akademiaqa.data.Urls.BOOKING_URL;
 
-public class GetBookingIDsRequest
+public class GetAllBookingsRequest
 {
     public static Response getAllBookingIDs()
     {
