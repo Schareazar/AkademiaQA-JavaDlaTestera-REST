@@ -1,4 +1,4 @@
-package pl.akademiaqa.dto;
+package pl.akademiaqa.data;
 
 import org.json.JSONObject;
 

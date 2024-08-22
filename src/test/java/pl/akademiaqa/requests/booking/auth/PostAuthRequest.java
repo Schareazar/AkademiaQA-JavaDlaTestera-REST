@@ -4,6 +4,7 @@ import io.restassured.http.ContentType;
 import org.json.JSONObject;
 
 import static io.restassured.RestAssured.given;
+import static pl.akademiaqa.data.Urls.AUTH_URL;
 
 public class PostAuthRequest {
 
@@ -13,7 +14,7 @@ public class PostAuthRequest {
         return given()
                 .contentType(ContentType.JSON)
                 .body(authInfo.toString())
-                .post("https://restful-booker.herokuapp.com/auth")
+                .post(AUTH_URL)
                 .then()
                 .statusCode(200)
                 .extract()

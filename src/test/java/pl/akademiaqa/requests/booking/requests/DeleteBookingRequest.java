@@ -2,27 +2,24 @@ package pl.akademiaqa.requests.booking.requests;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.json.JSONObject;
 import pl.akademiaqa.data.AuthInfo;
 import pl.akademiaqa.requests.booking.auth.PostAuthRequest;
 
 import static io.restassured.RestAssured.given;
 import static pl.akademiaqa.data.Urls.BOOKING_URL;
 
-public class PatchBookingRequest {
+public class DeleteBookingRequest {
 
     private static final String authToken = PostAuthRequest.createToken(AuthInfo.getAdminAuthJson());
 
-    public static Response patchBooking(JSONObject updatedBooking, String bookingId) {
+    public static Response deleteBooking (String bookingId) {
         return given()
                 .contentType(ContentType.JSON)
-                .body(updatedBooking.toString())
                 .header("cookie", "token=" + authToken)
-                .when()
-                .patch(BOOKING_URL + bookingId)
+                .delete(BOOKING_URL + bookingId)
                 .then()
-                .statusCode(200)
                 .extract()
                 .response();
     }
 }
+
